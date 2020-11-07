@@ -5,6 +5,11 @@ from django.db import models
 
 # Category Model
 class Category(models.Model):
+
+    # verbose name metaclass
+    class Meta:
+        verbose_name_plural = 'Categories'
+
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
